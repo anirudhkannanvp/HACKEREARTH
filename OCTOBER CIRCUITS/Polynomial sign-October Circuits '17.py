@@ -1,0 +1,33 @@
+n=int(input())
+a=list(map(int,input().split()))
+for i in range(n,-1,-1):
+    if(a[i]!=0):
+        break
+if(n!=0):
+    if(a[i]<0):
+        ans1=-1
+        if(i%2==1):
+            ans2=1
+        else:
+            ans2=-1
+    elif(a[i]>0):
+        ans1=1
+        if(i%2==1):
+            ans2=-1
+        else:
+            ans2=1
+    else:
+        ans1=0
+        ans2=0
+else:
+    i=0
+    if(a[i]<0):
+        ans1=-1
+        ans2=-1
+    elif(a[i]>0):
+        ans1=1
+        ans2=1
+    else:
+        ans1=0
+        ans2=0
+print(ans1,ans2,sep=" ",end=" ")
